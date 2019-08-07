@@ -21,15 +21,28 @@ Component tests
 
 ## ml
 tensorflow.js brain.js
+[Preprocess input data before making predictions using Amazon SageMaker inference pipelines and Scikit-learn](https://aws.amazon.com/cn/blogs/machine-learning/preprocess-input-data-before-making-predictions-using-amazon-sagemaker-inference-pipelines-and-scikit-learn/)
+[Think Bayes: Bayesian Statistics Made Simple](http://www.greenteapress.com/thinkbayes/html/index.html)
+### tag vectors
+[Mapping Medium’s Tags](https://medium.engineering/mapping-mediums-tags-1b9a78d77cf0) 
+cosine similarity 
 
 ## OS
 Linux OS understanding, focus on the anatomy of a Linux process<br />
 [All You Need To Know About Processes in Linux ](https://www.tecmint.com/linux-process-management/)
 
+## database
+Document Type Declaration
+[Row Store vs. Column Store Databases](https://dzone.com/articles/row-store-and-column-store-databases)
+[redis布隆过滤器的使用](https://blog.csdn.net/u013030276/article/details/88381868)
+
+## web
+[Difference between Pragma and Cache-control headers](https://stackoverflow.com/questions/10314174/difference-between-pragma-and-cache-control-headers)
+
 ## webpack
 [webpack 入门指南](https://www.cnblogs.com/vajoy/p/4650467.html)
 
-shimming
+shimming<br/>
 grunt/gulp
 
 ## nodejs
@@ -47,12 +60,37 @@ structure:<br />
 [All Possible Tic Tac Toe Winning Combinations](https://stackoverflow.com/questions/28712279/all-possible-tic-tac-toe-winning-combinations/54035004#54035004)
 
 ## system design
+[Operational transformation](https://en.wikipedia.org/wiki/Operational_transformation)
+[Conflict-free replicated data type](https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type)
 [Hotel Availability and Room Recommendation Algorithm](https://medium.com/makemytrip-engineering/hotel-availability-and-room-recommendation-algorithm-mmt-6e62c24adf3b)
 [Mastering HTTP Caching](https://blog.fortrabbit.com/mastering-http-caching)
+[The Stack That Helped Medium Drive 2.6 Millennia of Reading Time](https://medium.engineering/the-stack-that-helped-medium-drive-2-6-millennia-of-reading-time-e56801f7c492)
+auxiliary services written in Go
+[Using Blue-Green Deployment to Reduce Downtime and Risk](https://docs.cloudfoundry.org/devguide/deploy-apps/blue-green.html#push-an-app)
+
 
 ## project manage
+### management
+[2 Fast 2 Furious](https://medium.engineering/2-fast-2-furious-migrating-mediums-codebase-without-slowing-down-84b1e33d81f4)
+### design doc
 [Software Project Documentation](http://sce2.umkc.edu/BIT/burrise/pl/appendix/Software_Documentation_Templates/)
 [System Design Document Template](https://www.csee.umbc.edu/courses/undergraduate/421/fall03/CMSC421-DesignDocGuidelines.pdf)
 
 ## invest
 [Municipal Bonds](https://www.investopedia.com/investing/basics-of-municipal-bonds/)
+[Butterfly in Fixed Income Trading Strategies](https://finance.zacks.com/butterfly-fixed-income-trading-strategies-10170.html)
+
+## algorithm(todo list)
+[Google](https://wdxtub.com/interview/14520850400653.html)
+[Course Schedule](https://wdxtub.com/interview/14520607214882.html)
+[滑雪问题](https://blog.csdn.net/qq_39435120/article/details/79731250)
+[树和图](https://wdxtub.com/interview/14520597319260.html)
+[Palindrom Partition](https://wdxtub.com/interview/14520604917885.html)
+[907 Sum of Subarray Minimums](https://github.com/algorhythms/LeetCode/blob/master/907%20Sum%20of%20Subarray%20Minimums.py)
+[729 My Calendar I](https://github.com/algorhythms/LeetCode/blob/master/729%20My%20Calendar%20I.py)
+[Data structure behind T9 type of dictionary](https://stackoverflow.com/questions/2574016/data-structure-behind-t9-type-of-dictionary)
+
+## open questions
+Best Ways to Send Large Files<br />
+object storage vs block storage<br />
+fixed income trading strategies<br />
