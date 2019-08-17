@@ -26,6 +26,8 @@ tensorflow.js brain.js<br />
 ### tag vectors
 [Mapping Medium’s Tags](https://medium.engineering/mapping-mediums-tags-1b9a78d77cf0) <br />
 cosine similarity 
+### math
+[changepoint detection algorithms](http://members.cbio.mines-paristech.fr/~thocking/change-tutorial/RK-CptWorkshop.html)
 
 ## OS
 Linux OS understanding, focus on the anatomy of a Linux process<br />
@@ -90,6 +92,10 @@ auxiliary services written in Go
 [907 Sum of Subarray Minimums](https://github.com/algorhythms/LeetCode/blob/master/907%20Sum%20of%20Subarray%20Minimums.py)<br />
 [729 My Calendar I](https://github.com/algorhythms/LeetCode/blob/master/729%20My%20Calendar%20I.py)<br />
 [Data structure behind T9 type of dictionary](https://stackoverflow.com/questions/2574016/data-structure-behind-t9-type-of-dictionary)<br />
+
+[Coding Interview University](https://github.com/jwasham/coding-interview-university)<br />
+[Cache-oblivious algorithm](https://en.wikipedia.org/wiki/Cache-oblivious_algorithm)<br />
+
 
 ## open questions
 Best Ways to Send Large Files<br />
