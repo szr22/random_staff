@@ -98,6 +98,7 @@ auxiliary services written in Go<br />
 [729 My Calendar I](https://github.com/algorhythms/LeetCode/blob/master/729%20My%20Calendar%20I.py)<br />
 [Data structure behind T9 type of dictionary](https://stackoverflow.com/questions/2574016/data-structure-behind-t9-type-of-dictionary)<br />
 [从Trie树（字典树）谈到后缀树](https://blog.csdn.net/v_july_v/article/details/6897097)<br/>
+[Bisect Algorithm Functions in Python](https://www.geeksforgeeks.org/bisect-algorithm-functions-in-python/)<br/>
 
 [Coding Interview University](https://github.com/jwasham/coding-interview-university)<br />
 [Cache-oblivious algorithm](https://en.wikipedia.org/wiki/Cache-oblivious_algorithm)<br />
