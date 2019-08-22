@@ -115,3 +115,11 @@ object storage vs block storage<br />
 fixed income trading strategies<br />
 分层定价<br/>
 django react docker<br/>
+
+## Books
+Effective Python<br />
+High Output Management<br />
+Docker Cookbook<br />
+Mastering Python Networking<br />
+
+Where Have All the Leaders Gone?<br />
