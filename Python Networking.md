@@ -1,12 +1,32 @@
 ###Chapter 1,</b>
 Review of TCP/IP Protocol Suite and Python, reviews the fundamental technologies that make up internet communication today, 
 from the OSI and client-server model to TCP, UDP, and IP protocol suites. 
-The chapter will review the basics of Python languages such as types, operators, loops, functions, and packages. 
+The chapter will review the basics of Python languages such as types, operators, loops, functions, and packages.
+</b>
+TCP state machine to accomplish their daily tasks (I know I don't), but they would be familiar with the basics of the OSI model, the TCP and UDP operations, different IP headers fields, and other fundamental concepts.
+</b>
+*An overview of the internet
+  **Local Area Network (LAN)
+  **Internet Service Provider (ISP)
+  **Hosts, Internet of Things (IoT), Client; servers; network components as roads
+  **Main Distribution Frame (MDF), central location; Intermediate Distribution Frame (IDF), closer to user
+  **cloud data center CLOS network; edge data center
+  **Open System Interconnection (OSI): application, presentation, session, transport, network, data link, physical; tcp/ip model
+  **Client-server model
+  **[tcp/ip guide](http://www.tcpipguide.com/)
+  
+*The OSI and client-server model
+*TCP, UDP, and IP protocol suites
+*Python syntax, types, operators, and loops
+*Extending Python with functions, classes, and packages
+</b>
+
 
 ###Chapter 2,</b>
 Low-Level Network Device Interactions, uses practical examples to illustrate how to use Python to execute commands on a network device. 
 It will also discuss the challenges of having a CLI-only interface in automation. 
 The chapter will use the Pexpect and Paramiko libraries for the examples. 
+*Pexpect and Paramiko, Netmiko
 
 ###Chapter 3,</b>
 APIs and Intent-Driven Networking, discusses the newer network devices that support Application Programming Interfaces (APIs) and other high-level interaction methods. 
