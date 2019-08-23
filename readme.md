@@ -58,6 +58,9 @@ structure:<br />
 [Blockchain Applications](https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch12.asciidoc)<br />
 [python-bitcoinlib](https://github.com/petertodd/python-bitcoinlib)<br />
 
+## graph
+[blender](https://docs.blender.org/api/current/info_quickstart.html)
+
 ## oop(todo list)
 [All Possible Tic Tac Toe Winning Combinations](https://stackoverflow.com/questions/28712279/all-possible-tic-tac-toe-winning-combinations/54035004#54035004)<br />
 [Minesweeper in Python](https://codereview.stackexchange.com/questions/33548/minesweeper-in-python)<br/>
@@ -89,6 +92,7 @@ auxiliary services written in Go<br />
 [Municipal Bonds](https://www.investopedia.com/investing/basics-of-municipal-bonds/)<br />
 [Butterfly in Fixed Income Trading Strategies](https://finance.zacks.com/butterfly-fixed-income-trading-strategies-10170.html)<br />
 [capitalcube](https://online.capitalcube.com/)
+[second measure](https://secondmeasure.com/)
 
 ## algorithm(todo list)
 [Algorithms and Data Structures Cheatsheet](https://algs4.cs.princeton.edu/cheatsheet/)<br />
@@ -108,6 +112,10 @@ auxiliary services written in Go<br />
 [Nearest neighbor search](https://en.wikipedia.org/wiki/Nearest_neighbor_search)<br/>
 [Inversion (discrete mathematics)](https://en.wikipedia.org/wiki/Inversion_(discrete_mathematics))<br/>
 [Fuzzy search algorithm (approximate string matching algorithm)](https://stackoverflow.com/questions/32337135/fuzzy-search-algorithm-approximate-string-matching-algorithm)<br/>
+
+## documentation
+[How writers can get work done better with Git](https://opensource.com/article/19/4/write-git)
+[commonmark](https://commonmark.org/help/)
 
 
 ## open questions
