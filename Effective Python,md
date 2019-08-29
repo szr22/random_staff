@@ -1,0 +1,113 @@
+# 1. Pythonic Thinking
+
+## ITEM 1: KNOW WHICH VERSION OF PYTHON YOU’RE USING
+
+## ITEM 2: FOLLOW THE PEP 8 STYLE GUIDE
+1. Whitespace
+2. Naming
+3. Expressions and Statements
+
+## ITEM 3: KNOW THE DIFFERENCES BETWEEN BYTES, STR, AND UNICODE
+1. In Python 3, bytes and str instances are never equivalent—not even the empty string
+2. The second issue is that in Python 3, operations involving file handles (returned by the open built-in function) default to UTF-8 encoding
+
+In Python 3, bytes contains sequences of 8-bit values, str contains sequences of Unicode characters
+
+## ITEM 4: WRITE HELPER FUNCTIONS INSTEAD OF COMPLEX EXPRESSIONS
+
+## ITEM 5: KNOW HOW TO SLICE SEQUENCES
+somelist[start:end], where start is inclusive and end is exclusive
+
+## ITEM 6: AVOID USING START, END, AND STRIDE IN A SINGLE SLICE
+
+## ITEM 7: USE LIST COMPREHENSIONS INSTEAD OF MAP AND FILTER
+
+## ITEM 8: AVOID MORE THAN TWO EXPRESSIONS IN LIST COMPREHENSIONS
+
+## ITEM 9: CONSIDER GENERATOR EXPRESSIONS FOR LARGE COMPREHENSIONS
+
+## ITEM 10: PREFER ENUMERATE OVER RANGE
+
+## ITEM 11: USE ZIP TO PROCESS ITERATORS IN PARALLEL
+
+## ITEM 12: AVOID ELSE BLOCKS AFTER FOR AND WHILE LOOPS
+
+## ITEM 13: TAKE ADVANTAGE OF EACH BLOCK IN TRY/EXCEPT/ELSE/FINALLY
+try/except/else/finally
+
+# 2. Functions
+
+## ITEM 14: PREFER EXCEPTIONS TO RETURNING NONE
+```
+def divide(a, b):
+    try:
+        return True, a / b
+    except ZeroDivisionError:
+        return False, None
+```
+or 
+```
+def divide(a, b):
+    try:
+        return a / b
+    except ZeroDivisionError as e:
+        raise ValueError('Invalid inputs') from e
+```
+
+## ITEM 15: KNOW HOW CLOSURES INTERACT WITH VARIABLE SCOPE
+Bad:
+'''
+def sort_priority(values, group):
+    def helper(x):
+        if x in group:
+            return (0, x)
+        return (1, x)
+    values.sort(key=helper)
+
+numbers = [8, 3, 1, 2, 5, 4, 7, 6]
+group = {2, 3, 5, 7}
+sort_priority(numbers, group)
+print(numbers)
+'''
+
+Good:
+'''
+def sort_priority3(numbers, group):
+    found = False
+    def helper(x):
+        nonlocal found
+        if x in group:
+            found = True
+            return (0, x)
+        return (1, x)
+    numbers.sort(key=helper)
+    return found
+'''
+
+Better:
+'''
+class Sorter(object):
+    def __init__(self, group):
+        self.group = group
+        self.found = False
+
+    def __call__(self, x):
+        if x in self.group:
+            self.found = True
+            return (0, x)
+        return (1, x)
+
+sorter = Sorter(group)
+numbers.sort(key=sorter)
+'''
+
+note: Python has specific rules for comparing tuples. It first compares items in index zero, then index one, then index two, and so on. This is why the return value from the helper closure causes the sort order to have two distinct groups.
+
+variable resolve order
+1. The current function’s scope
+2. Any enclosing scopes (like other containing functions)
+3. The scope of the module that contains the code (also called the global scope)
+4. The built-in scope (that contains functions like len and str)
+
+5. (exception) If none of these places have a defined variable with the referenced name, then a NameError exception is raised.
+
