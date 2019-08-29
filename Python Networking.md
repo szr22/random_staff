@@ -28,6 +28,7 @@ It will also discuss the challenges of having a CLI-only interface in automation
 The chapter will use the Pexpect and Paramiko libraries for the examples. 
 *Pexpect and Paramiko, Netmiko</br>
 *[Data center networking changes](https://www.bigswitch.com/sites/default/files/presentations/murraydouglasstartuphotseatpanel.pdf)
+*[virl](http://virl.cisco.com/)
 
 ###Chapter 3,</br>
 APIs and Intent-Driven Networking, discusses the newer network devices that support Application Programming Interfaces (APIs) and other high-level interaction methods. 
