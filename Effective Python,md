@@ -111,3 +111,52 @@ variable resolve order
 
 5. (exception) If none of these places have a defined variable with the referenced name, then a NameError exception is raised.
 
+## ITEM 16: CONSIDER GENERATORS INSTEAD OF RETURNING LISTS
+good
+'''
+def index_words_iter(text):
+    if text:
+        yield 0
+    for index, letter in enumerate(text):
+        if letter == ' ':
+            yield index + 1
+result = list(index_words_iter(address))
+
+'''
+better
+'''
+def index_file(handle):
+    offset = 0
+    for line in handle:
+        if line:
+            yield offset
+        for letter in line:
+            offset += 1
+            if letter == ' ':
+               yield offset
+'''
+
+## ITEM 17: BE DEFENSIVE WHEN ITERATING OVER ARGUMENTS
+Good
+pass in a lambda expression that calls the generator and produces a new iterator each time.
+'''
+def normalize_func(get_iter):
+    total = sum(get_iter())   # New iterator
+    result = []
+    for value in get_iter():  # New iterator
+        percent = 100 * value / total
+        result.append(percent)
+    return result
+'''
+
+Better
+'''
+class ReadVisits(object):
+    def __init__(self, data_path):
+        self.data_path = data_path
+
+    def __iter__(self):
+        with open(self.data_path) as f:
+            for line in f:
+                yield int(line)
+'''
