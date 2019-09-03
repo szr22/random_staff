@@ -132,3 +132,6 @@ Docker Cookbook<br />
 Mastering Python Networking<br />
 
 Where Have All the Leaders Gone?<br />
+
+[Radical Candor](https://www.getabstract.com/en/summary/radical-candor/29002?u=bac)<br />
+
