@@ -134,4 +134,5 @@ Mastering Python Networking<br />
 Where Have All the Leaders Gone?<br />
 
 [Radical Candor](https://www.getabstract.com/en/summary/radical-candor/29002?u=bac)<br />
+[How to Win Friends and Influence People](https://www.getabstract.com/en/summary/how-to-win-friends-and-influence-people/1646?u=bac)
 
