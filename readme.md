@@ -136,3 +136,9 @@ Where Have All the Leaders Gone?<br />
 [Radical Candor](https://www.getabstract.com/en/summary/radical-candor/29002?u=bac)<br />
 [How to Win Friends and Influence People](https://www.getabstract.com/en/summary/how-to-win-friends-and-influence-people/1646?u=bac)
 
+## Business writing
+[The FT Essential Guide to Writing a Business Plan: How to win backing to start up or grow your business](https://www.amazon.com/Essential-Guide-Writing-Business-Plan/dp/1292085142/ref=sr_1_1?keywords=writing+a+business+plan+how+to+win+backing+to+start+up+or+grow+your+business&qid=1567872702&s=gateway&sr=8-1)
+[Essentials of Business Communication](https://www.amazon.com/Essentials-Business-Communication-Ellen-Guffey/dp/1337386499/ref=sr_1_1?crid=277G8NUOHKUWL&keywords=essential+business+communication&qid=1567873124&s=gateway&sprefix=essential+business+commu%2Caps%2C129&sr=8-1)
+[Statistical Techniques in Business and Economics](https://www.amazon.com/Statistical-Techniques-Economics-Mcgraw-hill-Operations/dp/1259666360/ref=sr_1_1?crid=2JU2SX3U5ILVR&keywords=statistics+techniques+in+business+and+economics&qid=1567873255&s=gateway&sprefix=statistics+techn%2Caps%2C125&sr=8-1)
+[Excellence in Business Communication](https://www.amazon.com/Excellence-Business-Communication-John-Thill-ebook/dp/B07SS71T7X/ref=sr_1_3?keywords=excellence+in+business+communication&qid=1567873481&s=gateway&sr=8-3)
+[Business Communication Today](https://www.amazon.com/Business-Communication-Today-Courtland-Bovee/dp/0134562186/ref=sr_1_3?crid=36IV4LRO6AUKA&keywords=business+communication+today&qid=1567873674&s=gateway&sprefix=busine%2Caps%2C147&sr=8-3)
