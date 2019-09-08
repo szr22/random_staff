@@ -159,4 +159,132 @@ class ReadVisits(object):
         with open(self.data_path) as f:
             for line in f:
                 yield int(line)
+
+visits = ReadVisits(path)
+percentages = normalize(visits)
+print(percentages)
 '''
+
+## ITEM 18: REDUCE VISUAL NOISE WITH VARIABLE POSITIONAL ARGUMENTS
+Good
+'''
+def log(message, *values):  # The only difference
+    if not values:
+        print(message)
+    else:
+        values_str = ', '.join(str(x) for x in values)
+        print('%s: %s' % (message, values_str))
+
+log('My numbers are', 1, 2)
+log('Hi there')  # Much better
+'''
+
+Better
+'''
+def my_generator():
+    for i in range(10):
+        yield i
+
+def my_func(*args):
+    print(args)
+
+it = my_generator()
+my_func(*it)
+'''
+
+## ITEM 19: PROVIDE OPTIONAL BEHAVIOR WITH KEYWORD ARGUMENTS
+
+## ITEM 20: USE NONE AND DOCSTRINGS TO SPECIFY DYNAMIC DEFAULT ARGUMENTS
+Default arguments are only evaluated once: during function definition at module load time. This can cause odd behaviors for dynamic values (like {} or [])
+Use None as the default value for keyword arguments that have a dynamic value. Document the actual default behavior in the function’s docstring.
+
+## ITEM 21: ENFORCE CLARITY WITH KEYWORD-ONLY ARGUMENTS
+
+# 3. Classes and Inheritance
+inheritance, polymorphism, and encapsulation
+
+## ITEM 22: PREFER HELPER CLASSES OVER BOOKKEEPING WITH DICTIONARIES AND TUPLES
+Avoid making dictionaries with values that are other dictionaries or long tuples.
+Use namedtuple for lightweight, immutable data containers before you need the flexibility of a full class.
+Move your bookkeeping code to use multiple helper classes when your internal state dictionaries get complicated.
+
+## ITEM 23: ACCEPT FUNCTIONS FOR SIMPLE INTERFACES INSTEAD OF CLASSES
+Instead of defining and instantiating classes, functions are often all you need for simple interfaces between components in Python.
+References to functions and methods in Python are first class, meaning they can be used in expressions like any other type.
+The __call__ special method enables instances of a class to be called like plain Python functions.
+When you need a function to maintain state, consider defining a class that provides the __call__ method instead of defining a stateful closure
+
+## ITEM 24: USE @CLASSMETHOD POLYMORPHISM TO CONSTRUCT OBJECTS GENERICALLY
+'''
+def generate_inputs(data_dir):
+    for name in os.listdir(data_dir):
+        yield PathInputData(os.path.join(data_dir, name))
+
+def create_workers(input_list):
+    workers = []
+    for input_data in input_list:
+        workers.append(LineCountWorker(input_data))
+    return workers
+
+def execute(workers):
+    threads = [Thread(target=w.map) for w in workers]
+    for thread in threads: thread.start()
+    for thread in threads: thread.join()
+
+    first, rest = workers[0], workers[1:]
+    for worker in rest:
+        first.reduce(worker)
+    return first.result
+    
+def mapreduce(data_dir):
+    inputs = generate_inputs(data_dir)
+    workers = create_workers(inputs)
+    return execute(workers)
+'''
+class
+'''
+class GenericInputData(object):
+    def read(self):
+        raise NotImplementedError
+
+    @classmethod
+    def generate_inputs(cls, config):
+        raise NotImplementedError
+
+class PathInputData(GenericInputData):
+    # ...
+    def read(self):
+        return open(self.path).read()
+
+    @classmethod
+    def generate_inputs(cls, config):
+        data_dir = config['data_dir']
+        for name in os.listdir(data_dir):
+            yield cls(os.path.join(data_dir, name))
+
+class GenericWorker(object):
+    # ...
+    def map(self):
+        raise NotImplementedError
+
+    def reduce(self, other):
+        raise NotImplementedError
+
+    @classmethod
+    def create_workers(cls, input_class, config):
+        workers = []
+        for input_data in input_class.generate_inputs(config):
+            workers.append(cls(input_data))
+        return workers
+'''
+
+Python only supports a single constructor per class, the __init__ method
+Use @classmethod to define alternative constructors for your classes.
+Use class method polymorphism to provide generic ways to build and connect concrete subclasses.
+
+## ITEM 25: INITIALIZE PARENT CLASSES WITH SUPER
+Python’s standard method resolution order (MRO) solves the problems of superclass initialization order and diamond inheritance.
+Always use the super built-in function to initialize parent classes.
+
+## ITEM 26: USE MULTIPLE INHERITANCE ONLY FOR MIX-IN UTILITY CLASSES
+
