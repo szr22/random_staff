@@ -287,4 +287,26 @@ Python’s standard method resolution order (MRO) solves the problems of supercl
 Always use the super built-in function to initialize parent classes.
 
 ## ITEM 26: USE MULTIPLE INHERITANCE ONLY FOR MIX-IN UTILITY CLASSES
+Avoid using multiple inheritance if mix-in classes can achieve the same outcome.
+Use pluggable behaviors at the instance level to provide per-class customization when mix-in classes may require it.
+Compose mix-ins to create complex functionality from simple behaviors.
 
+## ITEM 27: PREFER PUBLIC ATTRIBUTES OVER PRIVATE ONES
+Private attributes aren’t rigorously enforced by the Python compiler.
+Plan from the beginning to allow subclasses to do more with your internal APIs and attributes instead of locking them out by default.
+Use documentation of protected fields to guide subclasses instead of trying to force access control with private attributes.
+Only consider using private attributes to avoid naming conflicts with subclasses that are out of your control.
+
+## ITEM 28: INHERIT FROM COLLECTIONS.ABC FOR CUSTOM CONTAINER TYPES
+Inherit directly from Python’s container types (like list or dict) for simple use cases.
+Beware of the large number of methods required to implement custom container types correctly.
+Have your custom container types inherit from the interfaces defined in '''collections.abc''' to ensure that your classes match required interfaces and behaviors.
+
+4. Metaclasses and Attributes
+## ITEM 29: USE PLAIN ATTRIBUTES INSTEAD OF GET AND SET METHODS
+Define new class interfaces using simple public attributes, and avoid set and get methods.
+Use @property to define special behavior when attributes are accessed on your objects, if necessary.
+Image Follow the rule of least surprise and avoid weird side effects in your @property methods.
+Image Ensure that @property methods are fast; do slow or complex work using normal methods.
+
+## ITEM 30: CONSIDER @PROPERTY INSTEAD OF REFACTORING ATTRIBUTES
