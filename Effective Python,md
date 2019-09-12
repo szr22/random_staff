@@ -306,7 +306,36 @@ Have your custom container types inherit from the interfaces defined in '''colle
 ## ITEM 29: USE PLAIN ATTRIBUTES INSTEAD OF GET AND SET METHODS
 Define new class interfaces using simple public attributes, and avoid set and get methods.
 Use @property to define special behavior when attributes are accessed on your objects, if necessary.
-Image Follow the rule of least surprise and avoid weird side effects in your @property methods.
-Image Ensure that @property methods are fast; do slow or complex work using normal methods.
+Follow the rule of least surprise and avoid weird side effects in your @property methods.
+Ensure that @property methods are fast; do slow or complex work using normal methods.
 
 ## ITEM 30: CONSIDER @PROPERTY INSTEAD OF REFACTORING ATTRIBUTES
+Use @property to give existing instance attributes new functionality.
+Make incremental progress toward better data models by using @property.
+Consider refactoring a class and all call sites when you find yourself using @property too heavily.
+
+## ITEM 31: USE DESCRIPTORS FOR REUSABLE @PROPERTY METHODS
+Reuse the behavior and validation of @property methods by defining your own descriptor classes.
+Use WeakKeyDictionary to ensure that your descriptor classes don’t cause memory leaks.
+Don’t get bogged down trying to understand exactly how __getattribute__ uses the descriptor protocol for getting and setting attributes.
+
+## ITEM 32: USE __GETATTR__, __GETATTRIBUTE__, AND __SETATTR__ FOR LAZY ATTRIBUTES
+Use __getattr__ and __setattr__ to lazily load and save attributes for an object.
+Understand that __getattr__ only gets called once when accessing a missing attribute, whereas __getattribute__ gets called every time an attribute is accessed.
+Avoid infinite recursion in __getattribute__ and __setattr__ by using methods from super() (i.e., the object class) to access instance attributes directly.
+
+## ITEM 33: VALIDATE SUBCLASSES WITH METACLASSES
+Use metaclasses to ensure that subclasses are well formed at the time they are defined, before objects of their type are constructed.
+Metaclasses have slightly different syntax in Python 2 vs. Python 3.
+The __new__ method of metaclasses is run after the class statement’s entire body has been processed.
+
+## ITEM 34: REGISTER CLASS EXISTENCE WITH METACLASSES
+Class registration is a helpful pattern for building modular Python programs.
+Metaclasses let you run registration code automatically each time your base class is subclassed in a program.
+Using metaclasses for class registration avoids errors by ensuring that you never miss a registration call.
+
+## ITEM 35: ANNOTATE CLASS ATTRIBUTES WITH METACLASSES
+Metaclasses enable you to modify a class’s attributes before the class is fully defined.
+Descriptors and metaclasses make a powerful combination for declarative behavior and runtime introspection.
+You can avoid both memory leaks and the weakref module by using metaclasses along with descriptors.
+
