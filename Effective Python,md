@@ -464,3 +464,69 @@ pip is the command-line tool to use for installing packages from PyPI.
 pip is installed by default in Python 3.4 and above; you must install it yourself for older versions.
 The majority of PyPI modules are free and open source software.
 
+7. Collaboration
+## ITEM 49: WRITE DOCSTRINGS FOR EVERY FUNCTION, CLASS, AND MODULE
+Write documentation for every module, class, and function using docstrings. Keep them up to date as your code changes.
+For modules: Introduce the contents of the module and any important classes or functions all users should know about.
+For classes: Document behavior, important attributes, and subclass behavior in the docstring following the class statement.
+For functions and methods: Document every argument, returned value, raised exception, and other behaviors in the docstring following the def statement.
+
+## ITEM 50: USE PACKAGES TO ORGANIZE MODULES AND PROVIDE STABLE APIS
+Packages in Python are modules that contain other modules. Packages allow you to organize your code into separate, non-conflicting namespaces with unique absolute module names.
+Simple packages are defined by adding an __init__.py file to a directory that contains other source files. These files become the child modules of the directory’s package. Package directories may also contain other packages.
+You can provide an explicit API for a module by listing its publicly visible names in its __all__ special attribute.
+You can hide a package’s internal implementation by only importing public names in the package’s __init__.py file or by naming internal-only members with a leading underscore.
+When collaborating within a single team or on a single codebase, using __all__ for explicit APIs is probably unnecessary.
+
+## ITEM 51: DEFINE A ROOT EXCEPTION TO INSULATE CALLERS FROM APIS
+Defining root exceptions for your modules allows API consumers to insulate themselves from your API.
+Catching root exceptions can help you find bugs in code that consumes an API.
+Catching the Python Exception base class can help you find bugs in API implementations.
+Intermediate root exceptions let you add more specific types of exceptions in the future without breaking your API consumers.
+
+## ITEM 52: KNOW HOW TO BREAK CIRCULAR DEPENDENCIES
+ Circular dependencies happen when two modules must call into each other at import time. They can cause your program to crash at startup.
+The best way to break a circular dependency is refactoring mutual dependencies into a separate module at the bottom of the dependency tree.
+Dynamic imports are the simplest solution for breaking a circular dependency between modules while minimizing refactoring and complexity.
+
+## ITEM 53: USE VIRTUAL ENVIRONMENTS FOR ISOLATED AND REPRODUCIBLE DEPENDENCIES
+Virtual environments allow you to use pip to install many different versions of the same package on the same machine without conflicts.
+Virtual environments are created with pyvenv, enabled with source bin/activate, and disabled with deactivate.
+You can dump all of the requirements of an environment with pip freeze. You can reproduce the environment by supplying the requirements.txt file to pip install -r.
+In versions of Python before 3.4, the pyvenv tool must be downloaded and installed separately. The command-line tool is called virtualenv instead of pyvenv.
+
+8. Production
+## ITEM 54: CONSIDER MODULE-SCOPED CODE TO CONFIGURE DEPLOYMENT ENVIRONMENTS
+Programs often need to run in multiple deployment environments that each have unique assumptions and configurations.
+You can tailor a module’s contents to different deployment environments by using normal Python statements in module scope.
+Module contents can be the product of any external condition, including host introspection through the sys and os modules.
+
+## ITEM 55: USE REPR STRINGS FOR DEBUGGING OUTPUT
+Calling print on built-in Python types will produce the human-readable string version of a value, which hides type information.
+Calling repr on built-in Python types will produce the printable string version of a value. These repr strings could be passed to the eval built-in function to get back the original value.
+%s in format strings will produce human-readable strings like str. %r will produce printable strings like repr.
+You can define the __repr__ method to customize the printable representation of a class and provide more detailed debugging information.
+You can reach into any object’s __dict__ attribute to view its internals.
+
+## ITEM 56: TEST EVERYTHING WITH UNITTEST
+The only way to have confidence in a Python program is to write tests.
+The unittest built-in module provides most of the facilities you’ll need to write good tests.
+You can define tests by subclassing TestCase and defining one method per behavior you’d like to test. Test methods on TestCase classes must start with the word test.
+It’s important to write both unit tests (for isolated functionality) and integration tests (for modules that interact).
+
+## ITEM 57: CONSIDER INTERACTIVE DEBUGGING WITH PDB
+You can initiate the Python interactive debugger at a point of interest directly in your program with the import pdb; pdb.set_trace() statements.
+The Python debugger prompt is a full Python shell that lets you inspect and modify the state of a running program.
+pdb shell commands let you precisely control program execution, allowing you to alternate between inspecting program state and progressing program execution.
+
+## ITEM 58: PROFILE BEFORE OPTIMIZING
+It’s important to profile Python programs before optimizing because the source of slowdowns is often obscure.
+Use the cProfile module instead of the profile module because it provides more accurate profiling information.
+The Profile object’s runcall method provides everything you need to profile a tree of function calls in isolation.
+The Stats object lets you select and print the subset of profiling information you need to see to understand your program’s performance.
+
+## ITEM 59: USE TRACEMALLOC TO UNDERSTAND MEMORY USAGE AND LEAKS
+It can be difficult to understand how Python programs use and leak memory.
+The gc module can help you understand which objects exist, but it has no information about how they were allocated.
+The tracemalloc built-in module provides powerful tools for understanding the source of memory usage.
+tracemalloc is only available in Python 3.4 and above.
