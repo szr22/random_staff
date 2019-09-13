@@ -430,4 +430,37 @@ The multiprocessing module provides powerful tools that can parallelize certain 
 The power of multiprocessing is best accessed through the concurrent.futures built-in module and its simple ProcessPoolExecutor class.
 The advanced parts of the multiprocessing module should be avoided because they are so complex.
 
+## ITEM 42: DEFINE FUNCTION DECORATORS WITH FUNCTOOLS.WRAPS
+Decorators are Python syntax for allowing one function to modify another function at runtime.
+Using decorators can cause strange behaviors in tools that do introspection, such as debuggers.
+Use the wraps decorator from the functools built-in module when you define your own decorators to avoid any issues.
+
+## ITEM 43: CONSIDER CONTEXTLIB AND WITH STATEMENTS FOR REUSABLE TRY/FINALLY BEHAVIOR
+The with statement allows you to reuse logic from try/finally blocks and reduce visual noise.
+The contextlib built-in module provides a contextmanager decorator that makes it easy to use your own functions in with statements.
+The value yielded by context managers is supplied to the as part of the with statement. It’s useful for letting your code directly access the cause of the special context.
+
+## ITEM 44: MAKE PICKLE RELIABLE WITH COPYREG
+The pickle built-in module is only useful for serializing and deserializing objects between trusted programs.
+The pickle module may break down when used for more than trivial use cases.
+Use the copyreg built-in module with pickle to add missing attribute values, allow versioning of classes, and provide stable import paths.
+
+## ITEM 45: USE DATETIME INSTEAD OF TIME FOR LOCAL CLOCKS
+Avoid using the time module for translating between different time zones.
+Use the datetime built-in module along with the pytz module to reliably convert between times in different time zones.
+Always represent time in UTC and do conversions to local time as the final step before presentation.
+
+## ITEM 46: USE BUILT-IN ALGORITHMS AND DATA STRUCTURES
+Use Python’s built-in modules for algorithms and data structures.
+Don’t reimplement this functionality yourself. It’s hard to get right.
+
+## ITEM 47: USE DECIMAL WHEN PRECISION IS PARAMOUNT
+Python has built-in types and classes in modules that can represent practically every type of numerical value.
+The Decimal class is ideal for situations that require high precision and exact rounding behavior, such as computations of monetary values.
+
+## ITEM 48: KNOW WHERE TO FIND COMMUNITY-BUILT MODULES
+The Python Package Index (PyPI) contains a wealth of common packages that are built and maintained by the Python community.
+pip is the command-line tool to use for installing packages from PyPI.
+pip is installed by default in Python 3.4 and above; you must install it yourself for older versions.
+The majority of PyPI modules are free and open source software.
 
