@@ -1,0 +1,47 @@
+Design and develop web UI & RESTful web services solutions.
+Develop, test and implement ETL processes and database technologies that provide optimal performance, availability and reliability for large data warehouses.
+Design implement and maintain financial software application, programs and platforms.
+Interpret business requirements, business rules & validation rules, Transform them in to Low Level Design / technical terms.
+
+
+Job duties (8-10 bullet points - please update/edit as necessary): 
+· Developing web UI new platform by using angular2
+· Implement web services solutions for new platform
+· Integrate software components and third-party programs
+· Deploy third-party programs
+· Working with analysts to apply new features on current platform
+· Maintain and improve the performance of current platform
+· Testing the product in controlled, real situations before going live
+· Presenting ideas for system improvements
+· Create technical documentation for reference and reporting
+
+
+
+
+· Develop the User Interface (screens) for upgrade to BofAML Global Markets Sales CRM platform by using Angular technology
+· Implement Web Services solutions for new platform
+· Integrate software components and third-party programs
+· Deploy third-party programs
+· Working with Business Analysts to apply new features on current platform
+· Maintain and improve the performance of current platform
+· Testing the product in controlled, real situations before going live
+· Presenting ideas for system improvements
+
+Create technical documentation for reference and reporting
+
+
+
+Achieves optimal levels of performance and accomplishment with Compass enhancement.
+Continuously examines effectiveness and seeks better procedures, such as my multi-tasking skill, evaluate priority of assigned tasks
+Builds effective working with internal/external team, such as MAPS, BA, QA, Attivio support. 
+Continuously planning for improvement
+Be able to learn and adapts rapidly as well to changing situations
+Fosters a curiosity for innovative possibilities
+
+Keeps documents organized via confluence to avoid duplicate information
+
+----------------------------------------------------------------------------
+
+grep --color
+ps -ef | grep yarn | grep -v grep | awk '{print $2}' | xargs kill
+chmod -R 777
