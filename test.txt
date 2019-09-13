@@ -45,3 +45,12 @@ Keeps documents organized via confluence to avoid duplicate information
 grep --color
 ps -ef | grep yarn | grep -v grep | awk '{print $2}' | xargs kill
 chmod -R 777
+
+----------------------------------------------------------------------------
+
+https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.md#1-%E7%88%AC%E6%A5%BC%E6%A2%AF</b>
+https://equityzen.com/faq/</b>
+https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.md#1-%E7%88%AC%E6%A5%BC%E6%A2%AF</b>
+https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.md</b>
+https://www.cnblogs.com/grandyang/p/5935836.html</b>
+https://wdxtub.com/interview/14520604917885.html
