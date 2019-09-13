@@ -93,6 +93,7 @@ auxiliary services written in Go<br />
 [Butterfly in Fixed Income Trading Strategies](https://finance.zacks.com/butterfly-fixed-income-trading-strategies-10170.html)<br />
 [capitalcube](https://online.capitalcube.com/)
 [second measure](https://secondmeasure.com/)
+[US government bounds]https://www.investopedia.com/articles/investing/080515/top-4-us-government-bonds-etfs.asp
 
 ## algorithm(todo list)
 [Algorithms and Data Structures Cheatsheet](https://algs4.cs.princeton.edu/cheatsheet/)<br />
@@ -106,12 +107,16 @@ auxiliary services written in Go<br />
 [Data structure behind T9 type of dictionary](https://stackoverflow.com/questions/2574016/data-structure-behind-t9-type-of-dictionary)<br />
 [从Trie树（字典树）谈到后缀树](https://blog.csdn.net/v_july_v/article/details/6897097)<br/>
 [Bisect Algorithm Functions in Python](https://www.geeksforgeeks.org/bisect-algorithm-functions-in-python/)<br/>
+[埃拉托斯特尼筛法](https://zh.wikipedia.org/wiki/%E5%9F%83%E6%8B%89%E6%89%98%E6%96%AF%E7%89%B9%E5%B0%BC%E7%AD%9B%E6%B3%95)<br />
+
 
 [Coding Interview University](https://github.com/jwasham/coding-interview-university)<br />
 [Cache-oblivious algorithm](https://en.wikipedia.org/wiki/Cache-oblivious_algorithm)<br />
 [Nearest neighbor search](https://en.wikipedia.org/wiki/Nearest_neighbor_search)<br/>
 [Inversion (discrete mathematics)](https://en.wikipedia.org/wiki/Inversion_(discrete_mathematics))<br/>
 [Fuzzy search algorithm (approximate string matching algorithm)](https://stackoverflow.com/questions/32337135/fuzzy-search-algorithm-approximate-string-matching-algorithm)<br/>
+[100-days-of-algorithms](https://medium.com/100-days-of-algorithms/day-5-eratosthenes-sieve-60ab162a1f5b.)
+
 
 ## documentation
 [How writers can get work done better with Git](https://opensource.com/article/19/4/write-git)
